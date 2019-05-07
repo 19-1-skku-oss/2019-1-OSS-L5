@@ -3,7 +3,7 @@
 
 ## Team member
 
-`inline`
+
 ```
 * 김홍빈 [기계공학부/17]: HongBeenKim 
 * 민세원 [컴퓨터공학과/15]: minSW 
