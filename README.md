@@ -16,6 +16,7 @@
 
 ### 1. 오픈소스 소개
 
+Below is a list of open source games and game-related projects that can be found on GitHub - old school text adventures, educational games, 8-bit platform games, browser-based games, indie games, GameJam projects, add-ons/maps/hacks/plugins for commercial games, libraries, frameworks, engines, you name it.
 
 
 ### 2. 기여하고자 하는 부분
@@ -29,4 +30,6 @@ GUI 수정 및 알고리즘 수정
 
 
 ### 3. 관심 프로젝트로 선정한 이유
+
+인터페이스 등의 수정 사항이 많아 보이기 때문
 
