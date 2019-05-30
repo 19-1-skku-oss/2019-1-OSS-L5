@@ -1,10 +1,11 @@
 ---
 layout: home
 ---
-# About Theme
+# About Project
 
-This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
+fzf Color scheme GUI
 
-To learn how to install and use this theme check out the [installation guide](http://taylantatli.me/Halve/halve-theme/) for more information.
+A general-purpose command-line fuzzy finder 오픈소스인 [fzf](https://github.com/junegunn/fzf)의 Color Scheme를 설정할 수 있는 GUI 프로그램 개발을 하고자하는 fuzzy의 sub project이다.
 
-If you have a question, find a bug, or just want to say hi, please open an [issue on GitHub](https://github.com/TaylanTatli/Halve/issues/new).
+참고 _ fzf wiki [Color Schemes](https://github.com/junegunn/fzf/wiki/Color-schemes)
+

@@ -1,9 +1,9 @@
 # Site
-title: Halve
-description: Stylish, Two-Column Jekyll Theme
-url: https://taylantatli.github.io/Halve
-logo: halve.png                                       # Site logo
-locale: en_US
+title: 2019-1-OSS-L5
+description: 김홍빈/민세원/박경연/이영우
+url: https://19-1-skku-oss.github.io/2019-1-OSS-L5/
+logo: fzf.png                                       # Site logo
+locale: ko
 
 # Left Block Images
 background:
@@ -31,10 +31,10 @@ sass:
 # Social Links
 #email:             email
 #google.plus:        username
-twitter:            username
+#twitter:            username
 #facebook:           username
-github:             username
-stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
+github:             19-1-skku-oss/2019-1-OSS-L5
+#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
 #instagram:          username
@@ -52,7 +52,7 @@ stackoverflow:     123456/username   from a "http://stackoverflow.com/users/1234
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-behance:           username
+#ehance:           username
 
 # Gems
 gems:
