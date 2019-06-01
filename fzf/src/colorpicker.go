@@ -30,7 +30,7 @@ func initWindow() {
 	// Run bootstrap
 	astilog.Debugf("Running app built at %s", BuiltAt)
 	if err := bootstrap.Run(bootstrap.Options{
-		Asset: Asset,
+		//Asset: Asset,
 		AstilectronOptions: astilectron.Options{
 			AppName:            AppName,
 			AppIconDarwinPath:  "resources/icon.icns",
@@ -64,7 +64,7 @@ func initWindow() {
 			w = iw[0]
 			return nil
 		},
-		RestoreAssets:  RestoreAssets,
+		//RestoreAssets:  RestoreAssets,
 		Windows: []*bootstrap.Window{{
 			Homepage:       "index.html",
 			MessageHandler: handleMessages,
