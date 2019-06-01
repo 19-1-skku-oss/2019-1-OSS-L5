@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/base.css"/>
+    <link rel="stylesheet" href="static/lib/astiloader/astiloader.css">
+    <link rel="stylesheet" href="static/lib/astimodaler/astimodaler.css">
+    <link rel="stylesheet" href="static/lib/astinotifier/astinotifier.css">
+    <link rel="stylesheet" href="static/lib/font-awesome-4.7.0/css/font-awesome.min.css">    
+</head>
+<body>
+    <div class="number-area">
+        <textarea id="view"></textarea>
+        <textarea id="num"></textarea>
+    </div>
+    <div class="row btn-area">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3 btn-padding">
+                    <button type="button" id="clear" class="btn btn-primary" onclick="index.clear()">C</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="√" class="btn btn-primary" onclick="index.clickSymbol(this.id)">√</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="^2" class="btn btn-primary"onclick="index.clickSymbol(this.id)">x²</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="/" class="btn btn-primary" onclick="index.clickSymbol(this.id)">÷</button>                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 btn-padding">
+                    <button type="button" id="1" class="btn btn-secondary" onclick="index.clickNum(this.id)">1</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="2" class="btn btn-secondary" onclick="index.clickNum(this.id)">2</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="3" class="btn btn-secondary" onclick="index.clickNum(this.id)">3</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="x" class="btn btn-primary" onclick="index.clickSymbol(this.id)">×</button>                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 btn-padding">
+                    <button type="button" id="4" class="btn btn-secondary" onclick="index.clickNum(this.id)">4</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="5" class="btn btn-secondary" onclick="index.clickNum(this.id)">5</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="6" class="btn btn-secondary" onclick="index.clickNum(this.id)">6</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="+" class="btn btn-primary" onclick="index.clickSymbol(this.id)">＋</button>                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 btn-padding">
+                    <button type="button" id="7" class="btn btn-secondary" onclick="index.clickNum(this.id)">7</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="8" class="btn btn-secondary" onclick="index.clickNum(this.id)">8</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="9" class="btn btn-secondary" onclick="index.clickNum(this.id)">9</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="-" class="btn btn-primary" onclick="index.clickSymbol(this.id)">－</button>                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 btn-padding">
+                    <button type="button" id="0" class="btn btn-secondary" onclick="index.clickNum(this.id)">0</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="." class="btn btn-secondary" onclick="index.clickNum(this.id)">.</button>
+                </div>
+                <div class="col-3 btn-padding">
+                    <button type="button" id="result" class="btn btn-primary" onclick="index.reqResult()">=</button>                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/lib/astiloader/astiloader.js"></script>
+    <script src="static/lib/astimodaler/astimodaler.js"></script>
+    <script src="static/lib/astinotifier/astinotifier.js"></script>
+    <script src="static/lib/chart/chart.min.js"></script>
+    <script type="text/javascript">
+        index.init();
+    </script>
+</body>
+</html>
