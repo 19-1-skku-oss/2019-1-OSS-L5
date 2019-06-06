@@ -15,159 +15,110 @@
   <!-- MiniColors -->
   <script src="jquery.minicolors.js"></script>
   <link rel="stylesheet" href="jquery.minicolors.css">
-
-  <style>
-  body { background-color:#fafafa;}
-    dl {
-      margin: 20px 0;
-    }
-    dt {
-      font-size: 120%;
-    }
-    dd {
-      padding: 10px 20px 20px 20px;
-    }
-    dd:last-child {
-      border-bottom: none;
-    }
-    code {
-      color: black;
-      border: none;
-      background: rgba(128, 128, 128, .1);
-    }
-    pre {
-      background: #f8f8f8;
-      border: none;
-      color: #333;
-      padding: 20px;
-    }
-    h2 {
-      margin-top: 50px;
-    }
-    h3 {
-      color: #aaa;
-    }
-    .jumbotron {
-      padding: 40px;
-    }
-    .jumbotron h1 {
-      margin-top: 0;
-    }
-    .jumbotron p:last-child {
-      margin-bottom: 0;
-    }
-  </style>
-
+  <link rel="stylesheet" href="/home.css">
   <script>
     $(document).ready( function() {
+      updateCode();
 
       $('.demo').each( function() {
-        //
-        // Dear reader, it's actually very easy to initialize MiniColors. For example:
-        //
-        //  $(selector).minicolors();
-        //
-        // The way I've done it below is just for the demo, so don't get confused
-        // by it. Also, data- attributes aren't supported at this time...they're
-        // only used for this demo.
-        //
         $(this).minicolors({
-          control: $(this).attr('data-control') || 'hue',
-          defaultValue: $(this).attr('data-defaultValue') || '',
-          format: $(this).attr('data-format') || 'hex',
-          keywords: $(this).attr('data-keywords') || '',
-          inline: $(this).attr('data-inline') === 'true',
-          letterCase: $(this).attr('data-letterCase') || 'lowercase',
-          opacity: $(this).attr('data-opacity'),
-          position: $(this).attr('data-position') || 'bottom left',
-          swatches: $(this).attr('data-swatches') ? $(this).attr('data-swatches').split('|') : [],
-          change: function(value, opacity) {
-            if( !value ) return;
-            if( opacity ) value += ', ' + opacity;
-            if( typeof console === 'object' ) {
-              console.log(value);
-            }
-          },
           theme: 'bootstrap'
         });
-
       });
+    });
 
+    $(function() {
+      $(".form-control").change( function() {
+           updateCode();
+      });
     });
   </script>
 </head>
 
 <body>
-
-</div>
   <div class="container" style="margin: 30px auto;">
     <div class="col-12">
-
       <!-- Intro -->
       <div id="intro" class="jumbotron">
         <h2>'fzf' jQuery MiniColors example</h2>
       </div>
+    </div>
 
-      <h3>Preview</h3>
-      <div class="well row-6">
-        <div class="row">
-            <div class="col-lg-4 col-sm-4 col-12">
-              
+    <div class="row">
+        <div class= "col-lg-8 col-sm-8 col-12">
+          <h3>Preview</h3>
+          <div class="preview well">
+            Example code
+          </div>
+
+          <h3>Generated Code</h3>
+          <div class="code well">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-4 col-12">
+            <!-- Control types -->
+            <h3>Color Pallete</h3>
+            <div class="palette well">
+              <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-6">
+                      <div class="form-group">
+                          <label for="label-fg">fg</label>
+                          <input type="text" id="fg" class="form-control demo" data-control="hue" value="#ffffff">
+                      </div>
+                      <div class="form-group">
+                          <label for="label-bg">bg</label>
+                          <input type="text" id="bg" class="form-control demo" data-control="hue" value="#ffffff">
+                      </div>
+                      <div class="form-group">
+                          <label for="label-hl">hl</label>
+                          <input type="text" id="hl" class="form-control demo" data-control="hue" value="#ffffff">
+                      </div>
+                      <div class="form-group">
+                        <label for="label-info">info</label>
+                        <input type="text" id="info" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                        <label for="label-prompt">prompt</label>
+                        <input type="text" id="prompt" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                        <label for="label-pointer">pointer</label>
+                        <input type="text" id="pointer" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="label-fg+">fg+</label>
+                        <input type="text" id="fgp" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                        <label for="label-bg+">bg+</label>
+                        <input type="text" id="bgp" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                        <label for="label-hl+">hl+</label>
+                        <input type="text" id="hlp" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                      <label for="label-marker">marker</label>
+                      <input type="text" id="marker" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                        <label for="label-spinner">spinner</label>
+                        <input type="text" id="spinner" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                    <div class="form-group">
+                        <label for="label-header">header</label>
+                        <input type="text" id="header" class="form-control demo" data-control="hue" value="#ffffff">
+                    </div>
+                  </div>
+              </div>
             </div>
         </div>
-      </div>
 
-      <!-- Control types -->
-      <h3>Control Types</h3>
-      <div class="well">
-        <div class="row">
-          <div class="col-lg-4 col-sm-4 col-12">
-            <div class="form-group">
-              <label for="hue-demo">Hue 1 </label>
-              <input type="text" id="hue-demo-1" class="form-control demo" data-control="hue" value="#ff6161">
-            </div>
-            <div class="form-group">
-              <label for="hue-demo">Hue 2</label>
-              <input type="text" id="hue-demo-2" class="form-control demo" data-control="hue" value="#0088cc">
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-4 col-12">
-            <div class="form-group">
-              <label for="hue-demo">Hue 3 </label>
-              <input type="text" id="hue-demo-3" class="form-control demo" data-control="hue" value="#ff6161">
-            </div>
-            <div class="form-group">
-              <label for="hue-demo">Hue 4</label>
-              <input type="text" id="hue-demo-4" class="form-control demo" data-control="hue" value="#0088cc">
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-4 col-12">
-            <div class="form-group">
-              <label for="hue-demo">Hue 5 </label>
-              <input type="text" id="hue-demo-5" class="form-control demo" data-control="hue" value="#ff6161">
-            </div>
-            <div class="form-group">
-              <label for="hue-demo">Hue 6</label>
-              <input type="text" id="hue-demo-6" class="form-control demo" data-control="hue" value="#0088cc">
-            </div>
-          </div>
-         </div>
-     </div>
     </div>
   </div>
-  <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+  <script src="/home.js"></script>
 </body>
 </html>
