@@ -1,14 +1,26 @@
 # 2019-1-OSS-L5
 
+## Team Members
 
-## Team member
+### 박경연(팀장)
+- Student Number: 2017312971
+- Email: [contestpark@naver.com](mailto:contestpark@naver.com)
+- Github ID: [contestpark](https://github.com/contestpark)
 
-```
-* 김홍빈 [기계공학부/17]: HongBeenKim 
-* 민세원 [컴퓨터공학과/15]: minSW 
-* 박경연 [소프트웨어/17]: contestpark
-* 이영우 [컴퓨터공학과/13]: duddn311
-```
+### 김홍빈(팀원)
+- Student Number: 2017311983
+- Email: [dtb05045@gmail.com](mailto:dtb05045@gmail.com)
+- Github ID: [HongBeenKim](https://github.com/HongBeenKim)
+
+### 민세원(팀원)
+- Student Number: 2015310422
+- Email: [minsw08@gmail.com](mailto:minsw08@gmail.com)
+- Github ID: [minSW](https://github.com/minSW)
+
+### 이영우(팀원)
+- Student Number: 2013314600
+- Email: [duddn311@gmail.com](mailto:duddn311@gmail.com)
+- Github ID: [duddn311](https://github.com/duddn311)
 
 <br/>
 
