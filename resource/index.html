@@ -19,17 +19,18 @@
   <script>
     $(document).ready( function() {
       updateCode();
-
       $('.demo').each( function() {
         $(this).minicolors({
           theme: 'bootstrap'
         });
       });
+      updateView();
     });
 
     $(function() {
       $(".form-control").change( function() {
            updateCode();
+           updateView();
       });
     });
   </script>
@@ -48,7 +49,18 @@
         <div class= "col-lg-8 col-sm-8 col-12">
           <h3>Preview</h3>
           <div class="preview well">
-            Example code
+            <div class="view-block bg h4">
+                <span class="bgp">&nbsp;&nbsp;<span class="mar">></span></span><span class="fg">src/fzf/main</span><span class="hl">.go</span></br>
+                <span class="bgp">&nbsp;&nbsp;</span><span class="fg">&nbsp;&nbsp;src/pattern</span><span class="hl">.go</span></br>
+                <span class="bgp">&nbsp;&nbsp;<span class="mar">></span></span><span class="fg">src/options</span><span class="hl">.go</span></br>
+                <span class="bgp">&nbsp;&nbsp;</span><span class="fg">&nbsp;&nbsp;src/matcher</span><span class="hl">.go</span></br>
+                <span class="bgp plus"><span class="poi">></span><span class="fgp">&nbsp;&nbsp;src/history</span><span class="hlp">.go</span></span></br>
+                <span class="bgp">&nbsp;&nbsp;</span><span class="fg">&nbsp;&nbsp;src/reader</span><span class="hl">.go</span></br>
+                <span class="bgp">&nbsp;&nbsp;</span><span class="fg">&nbsp;&nbsp;src/merger</span><span class="hl">.go</span></br>
+                <span class="hea">&nbsp;&nbsp;&nbsp;&nbsp;This is Header</span></br>
+                <span class="spi">\</span><span class="inf">&nbsp;&nbsp;35/63 (3)</span></br>
+                <span class="pro">></span><span class="fg">&nbsp;&nbsp;.go$</span>
+            </div>
           </div>
 
           <h3>Generated Code</h3>
@@ -68,11 +80,11 @@
                       </div>
                       <div class="form-group">
                           <label for="label-bg">bg</label>
-                          <input type="text" id="bg" class="form-control demo" data-control="hue" value="#ffffff">
+                          <input type="text" id="bg" class="form-control demo" data-control="hue" value="#b1d691">
                       </div>
                       <div class="form-group">
                           <label for="label-hl">hl</label>
-                          <input type="text" id="hl" class="form-control demo" data-control="hue" value="#ffffff">
+                          <input type="text" id="hl" class="form-control demo" data-control="hue" value="#3535b5">
                       </div>
                       <div class="form-group">
                         <label for="label-info">info</label>
@@ -94,7 +106,7 @@
                     </div>
                     <div class="form-group">
                         <label for="label-bg+">bg+</label>
-                        <input type="text" id="bgp" class="form-control demo" data-control="hue" value="#ffffff">
+                        <input type="text" id="bgp" class="form-control demo" data-control="hue" value="#00ffff">
                     </div>
                     <div class="form-group">
                         <label for="label-hl+">hl+</label>

@@ -21,5 +21,19 @@ function updateCode() {
   $('.code').html($('.code').html().replace(/\n/g,'<br/>'));
   
   //export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  console.log($('.code').val());
+};
+
+function updateView() {
+  $(".fg").css("color", $('#fg').val());
+  $(".fgp").css("color", $('#fgp').val());
+  $(".bg").css("background-color", $('#bg').val());
+  $(".bgp").css("background-color", $('#bgp').val());
+  $(".hl").css("color", $('#hl').val());
+  $(".hlp").css("color", $('#hlp').val());
+  $(".inf").css("color", $('#info').val());
+  $(".pro").css("color", $('#prompt').val());
+  $(".poi").css("color", $('#pointer').val());
+  $(".mar").css("color", $('#marker').val());
+  $(".spi").css("color", $('#spinner').val());
+  $(".hea").css("color", $('#header').val());
 }
