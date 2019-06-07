@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery MiniColors</title>
-<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -15,7 +15,8 @@
   <!-- MiniColors -->
   <script src="jquery.minicolors.js"></script>
   <link rel="stylesheet" href="jquery.minicolors.css">
-  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="index.css">
+
   <script>
     $(document).ready( function() {
       updateCode();
@@ -26,20 +27,17 @@
       });
       updateView();
     });
-
-    $(function() {
-      $(".form-control").change( function() {
-           updateCode();
-           updateView();
-      });
-    });
   </script>
 </head>
 
 <body>
-  <div class="container" style="margin: 10px auto;">
+  <!-- Intro -->
+  <nav class="navbar-fixed-top navbar-expand-sm title">
+    <h4><span style="color:#F60069;">></span> <span style="color:#AEE2BC;">fz</span>f jQuery MiniColors example</h4>
+  </nav>
+  <div class="container">
     <div class="row">
-        <div class= "col-xs-6 col-sm-6 col-lg-8">
+        <div class= "col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-1 col-lg-offset-1">
           <h3><span style="color:#F60069;">></span> Preview</h3>
           <div class="preview well">
             <div class="view-block bg h4">
@@ -57,11 +55,12 @@
           </div>
 
           <h3><span style="color:#F60069;">></span> Generated Code</h3>
-          <div class="code well">
+          <div class="well"><pre><code class="code">
+          </code></pre>
           </div>
         </div>
 
-        <div class="col-xs-6 col-lg-4">
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
             <!-- Control types -->
             <h3><span style="color:#F60069;">></span> Color Pallete</h3>
             <div class="palette well">
@@ -121,16 +120,8 @@
               </div>
             </div>
         </div>
-
     </div>
-    
   </div>
-        <!-- Intro -->
-      
-        <nav class="navbar-fixed-bottom navbar-expand-sm title">
-            <!-- <a class="navbar-brand">'fzf' jQuery MiniColors example</a> -->
-            <h4><span style="color:#F60069;">></span> <span style="color:#AEE2BC;">fz</span>f jQuery MiniColors example</h4>
-        </nav>
-  <script src="/home.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

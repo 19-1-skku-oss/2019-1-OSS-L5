@@ -1,23 +1,17 @@
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-36251023-1']);
-_gaq.push(['_setDomainName', 'jqueryscript.net']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-
+$(function() {
+  $(".form-control").change( function() {
+       updateCode();
+       updateView();
+  });
+});
 
 function updateCode() {
   $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'"
                   +"\n--color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val()
-                  +",fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val()
+                  +"\n--color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val()
                   +"\n--color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val()
-                  +",marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val()
-                  +"\n'");
+                  +"\n--color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val()
+                  +"'");
   $('.code').html($('.code').html().replace(/\n/g,'<br/>'));
   
   //export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
@@ -42,7 +36,6 @@ function getColorText(ele) {
   if (ele.val()) {
     return ele.val();
   }
-
   return -1;
 }
 
