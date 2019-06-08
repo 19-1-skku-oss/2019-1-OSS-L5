@@ -1,18 +1,20 @@
-body { background-color:#fafafa;
+body {
+  background-color: #fafafa;
   touch-action: none;
 }
+
 code {
-  /* border: none; */
   overflow: hidden;
   word-wrap: break-word;
 }
+
 pre {
   background: #121212;
-  /* border: none; */
   color: #d0d0d0;
   padding: 10px;
   margin: 0px;
 }
+
 h3 {
   color: #3F3F3F;
   font-weight: bold;
@@ -23,6 +25,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
 }
+
 .view-block {
   padding: 20px;
   line-height: 121%;
@@ -35,7 +38,7 @@ h3 {
 .title {
   padding-left: 30px;
   color: #E9E9E9;
-  background: #3F3F3F;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #AEE2BC, #3F3F3F, #3F3F3F, #3F3F3F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: #3F3F3F;    /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #AEE2BC, #3F3F3F, #3F3F3F, #3F3F3F); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #AEE2BC, #3F3F3F, #3F3F3F, #3F3F3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
