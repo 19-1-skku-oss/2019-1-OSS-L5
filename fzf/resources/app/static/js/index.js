@@ -1,108 +1,71 @@
-let index = {
-    about: function(html) {
-        let c = document.createElement("div");
-        c.innerHTML = html;
-        asticode.modaler.setContent(c);
-        asticode.modaler.show();
-    },    
-    init: function() {
-        // Init
-        asticode.loader.init();
-        asticode.modaler.init();
-        asticode.notifier.init();
+$(function() {
+  $(".form-control").change(function() {
+    updateCode();
+    updateView();
+  });
+});
 
-        // Wait for astilectron to be ready
-        document.addEventListener('astilectron-ready', function() {
-            // Listen
-            index.listen();
-        })
-    },
-    clickNum: function(id) {
-        let textarea = document.getElementById("view");
-        textarea.value = textarea.value+id;
+function updateCode() {
+  $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'" +
+    "\n --color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
+    "\n --color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
+    "\n --color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
+    "\n --color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val() +
+    "'");
+  $('.code').html($('.code').html().replace(/\n/g, '<br/>'));
 
-        let number = document.getElementById("num");
-        number.value = number.value+id; 
-    },
-    clickSymbol: function(id) {
-        let textarea = document.getElementById("view");
-        textarea.value = textarea.value+" "+id+" ";
-        index.sendNumber();
-        index.sendSymbol(id);
-    },
-    sendNumber: function() {
-        let message = {"name": "sendNum"};
-        
-        let number = document.getElementById("num");
-        message.payload = number.value;
-        
-        astilectron.sendMessage(message, function(message) {
-            // Check error
-            if (message.name === "error") {
-                asticode.notifier.error(message.payload);
-                return
-            }            
-        })
-        number.value = ""
-    },
-    sendSymbol: function(id) {
-        let message = {"name": "sendSymbol"};
-        message.payload = id;
-        astilectron.sendMessage(message, function(message) {
-
-            // Check error
-            if (message.name === "error") {
-                asticode.notifier.error(message.payload);
-                return
-            }
-            
-        })
-    },    
-    reqResult: function() {
-        index.sendNumber();
-
-        let message = {"name": "result"};
-
-        astilectron.sendMessage(message, function(message) {
-            // Check error
-            if (message.name === "error") {
-                asticode.notifier.error(message.payload);
-                return
-            }            
-        })
-    },
-    clear: function() {
-        let textarea = document.getElementById("view");
-        textarea.value = "";
-
-        let number = document.getElementById("num");
-        number.value = ""; 
-
-        let message = {"name": "clear"};
-        
-        astilectron.sendMessage(message, function(message) {
-            // Check error
-            if (message.name === "error") {
-                asticode.notifier.error(message.payload);
-                return
-            }            
-        })
-    },
-    listen: function() {
-        astilectron.onMessage(function(message) {
-            switch (message.name) {
-                case "about":
-                    index.about(message.payload);
-                    return {payload: "payload"};
-                    break;
-                case "resResult":
-                    index.clear();
-                    let textarea = document.getElementById("view");
-                    textarea.value = message.payload;
-                    let number = document.getElementById("num");
-                    number.value = message.payload;
-                    break;
-            }
-        });
-    }
 };
+
+function updateView() {
+  updateColorView($(".fg"), "color", $('#fg').val());
+  updateColorView($(".bg"), "background-color", $('#bg').val());
+  $(".fgp").css("color", $('#fgp').val());
+  $(".bgp").css("background-color", $('#bgp').val());
+  $(".hl").css("color", $('#hl').val());
+  $(".hlp").css("color", $('#hlp').val());
+  $(".inf").css("color", $('#info').val());
+  $(".pro").css("color", $('#prompt').val());
+  $(".poi").css("color", $('#pointer').val());
+  $(".mar").css("color", $('#marker').val());
+  $(".spi").css("color", $('#spinner').val());
+  $(".hea").css("color", $('#header').val());
+}
+
+function getColorText(ele) {
+  if (ele.val()) {
+    return ele.val();
+  }
+  return -1;
+}
+
+function updateColorView(ele, styleType, val) {
+  if (val) {
+    ele.css(styleType, val);
+  }
+}
+
+function setDefault(ele) {
+  $(ele).val("")
+  updateCode();
+}
+
+function copyToClipboard() {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($("#export-code").text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+
+  $("#copy-btn").popover('show');
+  setTimeout(function() {
+    $("#copy-btn").popover('destroy');
+  }, 1000);
+}
+
+function applyToFzf() {
+  //TODO : implement apply
+  $("#apply-btn").popover('show');
+  setTimeout(function() {
+    $("#apply-btn").popover('destroy');
+  }, 1000);
+}
