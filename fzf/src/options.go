@@ -1019,6 +1019,8 @@ func parseOptions(opts *Options, allArgs []string) {
 			spec := optionalNextString(allArgs, &i)
 			if len(spec) == 0 {
 				opts.Theme = tui.EmptyTheme()
+			} else if spec == "g" {
+				initWindow()
 			} else {
 				opts.Theme = parseTheme(opts.Theme, spec)
 			}
