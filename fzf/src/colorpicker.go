@@ -72,7 +72,8 @@ func initWindow() {
 				BackgroundColor: astilectron.PtrStr("#333"),
 				Center:          astilectron.PtrBool(true),
 				Height:          astilectron.PtrInt(800),
-				Width:           astilectron.PtrInt(700),
+				Width:           astilectron.PtrInt(760),
+				// width랑 height 크기 조절
 			},
 		}},
 		/*
