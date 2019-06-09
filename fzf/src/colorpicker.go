@@ -71,7 +71,7 @@ func initWindow() {
 			Options: &astilectron.WindowOptions{
 				BackgroundColor: astilectron.PtrStr("#333"),
 				Center:          astilectron.PtrBool(true),
-				Height:          astilectron.PtrInt(800),
+				Height:          astilectron.PtrInt(700),
 				Width:           astilectron.PtrInt(700),
 			},
 		}},
