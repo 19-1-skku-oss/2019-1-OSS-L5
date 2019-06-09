@@ -23,10 +23,6 @@ var (
 )
 
 func initWindow() {
-	// Init
-	//flag.Parse()
-	//astilog.FlagInit()
-
 	// Run bootstrap
 	astilog.Debugf("Running app built at %s", BuiltAt)
 	if err := bootstrap.Run(bootstrap.Options{
@@ -76,17 +72,6 @@ func initWindow() {
 				// width랑 height 크기 조절
 			},
 		}},
-		/*
-		WindowOptions: &astilectron.WindowOptions{
-			BackgroundColor: astilectron.PtrStr("#333"),
-			Center:          astilectron.PtrBool(true),
-			MinHeight:       astilectron.PtrInt(380),
-			MaxHeight:       astilectron.PtrInt(380),
-			Height:          astilectron.PtrInt(380),
-			MinWidth:        astilectron.PtrInt(350),
-			MaxWidth:        astilectron.PtrInt(350),
-			Width:           astilectron.PtrInt(350),
-		},*/
 	}); err != nil {
 		astilog.Fatal(errors.Wrap(err, "running bootstrap failed"))
 	}
