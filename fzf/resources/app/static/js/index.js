@@ -6,14 +6,13 @@ $(function() {
 });
 
 function updateCode() {
-  $('.code').text(
-    "--color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
-    "\n" + "--color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
-    "\n--color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
-    "\n--color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val()
-    );
+  $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'" +
+    "\n --color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
+    "\n --color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
+    "\n --color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
+    "\n --color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val() +
+    "'");
   $('.code').html($('.code').html().replace(/\n/g, '<br/>'));
-
 };
 
 function updateView() {
@@ -64,7 +63,11 @@ function copyToClipboard() {
 
 function applyToFzf() {
   let message = {"name": "sendCode"};
-  message.payload = $("#export-code").text();
+  message.payload =
+    "--color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
+    "\n" + "--color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
+    "\n--color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
+    "\n--color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val();
   
   astilectron.sendMessage(message, function(message) {
       // Check error
