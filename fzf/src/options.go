@@ -1305,6 +1305,16 @@ func ParseOptions() *Options {
 		parseOptions(opts, words)
 	}
 
+	var configFile, err = os.Open(".ColorConfig")
+	if err == nil {
+		var data = make([]byte, 200)
+		configFile.Read(data)
+		words, _ := shellwords.Parse(string(data))
+		if len(words) > 1 {
+			parseOptions(opts, words[:1])
+		}
+	} 
+
 	// Options from command-line arguments
 	parseOptions(opts, os.Args[1:])
 
