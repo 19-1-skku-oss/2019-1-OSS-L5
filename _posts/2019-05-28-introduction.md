@@ -10,7 +10,7 @@ tags:
   - fzf
 ---
 
-# command-line fuzzy finder(fzf)
+# fzf
 
 ## Introduce Our Team
 
