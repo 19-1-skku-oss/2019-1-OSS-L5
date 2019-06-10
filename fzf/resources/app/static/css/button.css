@@ -70,35 +70,34 @@
 }
 
 .btn-green:hover {
-  color: #3F3F3F;
+  background: #A5E8BA;
 }
 
 .btn-green:before,
 .btn-green:after {
-  background: #AEE2BC;
+  background: #56E37E;
 }
 
 .btn-green:active {
-  background: #EDFFF2;
-  color: #88C99B;
+  background: #56E37E;
 }
 
-.btn-dark {
-  background: #666666;
+.btn-pink {
+  background: #F27EAD;
 }
 
-.btn-dark:hover {
-  color: #3F3F3F;
+.btn-pink:hover {
+  background: #F59BBF;
 }
 
-.btn-dark:before,
-.btn-dark:after {
+.btn-pink:before,
+.btn-pink:after {
   background: #F60069;
 }
 
-.btn-dark:active {
-  background: #FFE5F0;
-  color: #F60069;
+.btn-pink:active {
+  background: #F60069;
+  color: #FFFFFF;
 }
 
 .set-btns {
