@@ -8,7 +8,6 @@
   border-top-color: #000000;
 }
 
-
 /* Buttons */
 .buttons {
   float: initial;
@@ -70,35 +69,34 @@
 }
 
 .btn-green:hover {
-  color: #3F3F3F;
+  background: #A5E8BA;
 }
 
 .btn-green:before,
 .btn-green:after {
-  background: #AEE2BC;
+  background: #56E37E;
 }
 
 .btn-green:active {
-  background: #EDFFF2;
-  color: #88C99B;
+  background: #56E37E;
 }
 
-.btn-dark {
-  background: #666666;
+.btn-pink {
+  background: #F27EAD;
 }
 
-.btn-dark:hover {
-  color: #3F3F3F;
+.btn-pink:hover {
+  background: #F59BBF;
 }
 
-.btn-dark:before,
-.btn-dark:after {
+.btn-pink:before,
+.btn-pink:after {
   background: #F60069;
 }
 
-.btn-dark:active {
-  background: #FFE5F0;
-  color: #F60069;
+.btn-pink:active {
+  background: #F60069;
+  color: #FFFFFF;
 }
 
 .set-btns {
@@ -110,21 +108,13 @@
 
 .btn-mini {
   position: relative;
-  border: 0;
-  padding: 15px 25px;
   display: inline-block;
   text-align: center;
   color: white;
   margin: 5px;
   border-radius: 10px;
-}
-
-.btn-mini:active {
-  top: 4px;
-}
-
-.btn-mini:focus {
-  outline: 0;
+  padding: 4px 12px;
+  font-size: 12px;
 }
 
 a[class*="btn-mini"] {
@@ -136,9 +126,12 @@ button[class*="btn-mini"] {
   border: 0;
 }
 
-.btn-mini {
-  padding: 4px 12px;
-  font-size: 12px;
+.btn-mini:active {
+  top: 4px;
+}
+
+.btn-mini:focus {
+  outline: 0;
 }
 
 .btn-mini.dark {
