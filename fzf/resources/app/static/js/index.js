@@ -44,19 +44,9 @@ function setDefault(ele) {
 }
 
 function resetToDefault() {
-  $('#fg').val(fg.defaultValue);
-  $('#bg').val(bg.defaultValue);
-  $('#hl').val(hl.defaultValue);
-  $('#fgp').val(fgp.defaultValue);
-  $('#bgp').val(bgp.defaultValue);
-  $('#hlp').val(hlp.defaultValue);
-  $('#info').val(info.defaultValue);
-  $('#promp').val(promp.defaultValue);
-  $('#pointer').val(pointer.defaultValue);
-  $('#marker').val(marker.defaultValue);
-  $('#spinner').val(spinner.defaultValue);
-  $('#header').val(header.defaultValue);
-
+  $('.opt').each(function() {
+    console.log($(this).minicolors('value', this.defaultValue));
+  });
   updateCode();
   updateView();
 }
