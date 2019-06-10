@@ -134,7 +134,7 @@ Color Scheme을 수정하고, Color Picker를 만들기 위해 먼저 original r
 
 ### 3. Implement Color Picker
 
-* **Implementation**
+**Implementation**
 
 Color Picker를 구현하는데 [go-atilectron-bundler](https://github.com/asticode/go-astilectron-bundler)를 사용하였다.
 
@@ -150,7 +150,7 @@ html,css,js를 통해 view를 만들고, 이 프로그램을 통해 기존의 fz
 
 <img src="https://raw.githubusercontent.com/19-1-skku-oss/2019-1-OSS-L5/master/picture/colorpicker_gui.png" width="70%">
 
-* **Install and Usage**
+**Install and Usage**
 
 **Install**
 
@@ -163,12 +163,13 @@ $ ./fzf --color g
 
 **Usage**
 
-Color Picker 실행
+* Color Picker 실행
 
 ```sh
 $ ./fzf --color g
 ```
-fzf실행
+
+* fzf실행
 
 ```sh
 $ ./fzf
