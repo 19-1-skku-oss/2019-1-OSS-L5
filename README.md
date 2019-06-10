@@ -138,9 +138,9 @@ Color Scheme을 수정하고, Color Picker를 만들기 위해 먼저 original r
 
 Color Picker를 구현하는데 [go-atilectron-bundler](https://github.com/asticode/go-astilectron-bundler)를 사용하였다.
 
-html,css,js를 통해 view를 만들고, 이 프로그램을 통해 기존의 fzf와 통신할 수 있게 만들어 주었다. ([issue #10](https://github.com/19-1-skku-oss/2019-1-OSS-L5/issues/10) 참고)
+html, css, js를 통해 view를 만들고, 이 프로그램을 통해 기존의 fzf와 통신할 수 있게 만들어 주었다. ([issue #10](https://github.com/19-1-skku-oss/2019-1-OSS-L5/issues/10) 참고)
 
-먼저, Color Picker를 먼저 html, css, js를 통해 구현하였다.
+먼저, Color Picker를 html, css, js를 통해 구현하였다.
 
 <img src="https://raw.githubusercontent.com/19-1-skku-oss/2019-1-OSS-L5/master/picture/colorpicker_html.png" width="70%">
 
