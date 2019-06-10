@@ -49,6 +49,11 @@ function resetToDefault() {
   });
   updateCode();
   updateView();
+
+  $("#reset-btn").popover('show');
+  setTimeout(function() {
+    $("#reset-btn").popover('destroy');
+  }, 1000);
 }
 
 function applyToFzf() {
