@@ -20,8 +20,8 @@ html, css, js를 통해 view를 만들고, 이 프로그램을 통해 기존의 
 ### Install go-astilectron-bundler
 
 **Install**
-* Download go-astilectron-bootstrap
-* Download go-astilectron-bundler
+* Download [go-astilectron-bootstrap](https://github.com/asticode/go-astilectron-bootstrap)
+* Download [go-astilectron-bundler](https://github.com/asticode/go-astilectron-bundler)
 * ~/go/src/github.com/asticode/go-astilectron-bundler에서 `go install ./astilectron-bundler`
 * ~/go/src/github.com/asticode/go-astilectron-bundler/astilectron-bundler에서 `go build`
 
