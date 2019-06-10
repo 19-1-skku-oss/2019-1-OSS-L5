@@ -8,7 +8,6 @@
   border-top-color: #000000;
 }
 
-
 /* Buttons */
 .buttons {
   float: initial;
@@ -109,21 +108,13 @@
 
 .btn-mini {
   position: relative;
-  border: 0;
-  padding: 15px 25px;
   display: inline-block;
   text-align: center;
   color: white;
   margin: 5px;
   border-radius: 10px;
-}
-
-.btn-mini:active {
-  top: 4px;
-}
-
-.btn-mini:focus {
-  outline: 0;
+  padding: 4px 12px;
+  font-size: 12px;
 }
 
 a[class*="btn-mini"] {
@@ -135,9 +126,12 @@ button[class*="btn-mini"] {
   border: 0;
 }
 
-.btn-mini {
-  padding: 4px 12px;
-  font-size: 12px;
+.btn-mini:active {
+  top: 4px;
+}
+
+.btn-mini:focus {
+  outline: 0;
 }
 
 .btn-mini.dark {

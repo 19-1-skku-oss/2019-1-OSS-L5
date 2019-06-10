@@ -8,11 +8,20 @@
   <title>fzf Color Picker</title>
   
   <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+ 
   <!-- jQuery -->
-  <!-- 여기서 윈도우 모듈로 jquery가 실행될 수 있게 바꿔줌 -->
-  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <!-- and scripts for running jQuery with window module -->
+  <script>
+  if (typeof module === 'object') {
+    window.module = module;
+    module = undefined;
+  }
+  </script>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script>if (window.module) module = window.module;</script>
+  <script>
+  if (window.module)
+    module = window.module;
+  </script>
 
   <!-- Bootstrap 3 -->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
