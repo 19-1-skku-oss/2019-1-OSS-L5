@@ -19,7 +19,8 @@ func handleMessages(_ *astilectron.Window, m bootstrap.MessageIn) (payload inter
 		if err := json.Unmarshal(m.Payload, &s); err != nil {
 			astilog.Error(errors.Wrap(err, "json.Unmarshal failed"))
 		}
-		var outputFile, _ = os.Create(".ColorConfig")
+		fzfPath := os.Getenv("FZF_PATH")
+		var outputFile, _ = os.Create(fzfPath + ".ColorConfig")
 		defer outputFile.Close()
 		s = s + "\n"
 		fmt.Fprint(outputFile, s)

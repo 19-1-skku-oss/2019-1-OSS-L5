@@ -1021,7 +1021,8 @@ func parseOptions(opts *Options, allArgs []string) {
 				opts.Theme = tui.EmptyTheme()
 			} else if spec == "g" {
 				initWindow()
-				configFile, err := os.Open(".ColorConfig")
+				fzfPath := os.Getenv("FZF_PATH")
+				configFile, err := os.Open(fzfPath + ".ColorConfig")
 				if err == nil {
 					data := make([]byte, 200)
 					configFile.Read(data)
@@ -1313,8 +1314,9 @@ func ParseOptions() *Options {
 	if len(words) > 0 {
 		parseOptions(opts, words)
 	}
-
-	configFile, err := os.Open(".ColorConfig")
+	// Get environment variable: FZF_PATH (This should be registered manually by user)
+	fzfPath := os.Getenv("FZF_PATH")
+	configFile, err := os.Open(fzfPath + ".ColorConfig")
 	if err == nil {
 		data := make([]byte, 200)
 		configFile.Read(data)
