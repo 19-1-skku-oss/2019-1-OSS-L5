@@ -29,7 +29,7 @@ tags:
 ### Web Site
 * [https://19-1-skku-oss.github.io/2019-1-OSS-L5/](https://19-1-skku-oss.github.io/2019-1-OSS-L5/)
 
-<br>
+<br />
 
 ## Introduce Our Project
 
@@ -50,7 +50,7 @@ approximate string matching로 정해진 형식으로 typing하면 fzf 결과를
 예를들어 fzf를 실행시킨 후 `exampleo`를 검색하면 다음과 같이 `exampleo`가 들어간 모든 파일을 찾아준다.
 
 
-<br>
+<br />
 
 ## Install and Usages
 
@@ -89,7 +89,7 @@ $ fzf
 
 자세한 방법은 [original repository](https://github.com/junegunn/fzf)참고
 
-<br>
+<br />
 
 ## What we implemented
 
