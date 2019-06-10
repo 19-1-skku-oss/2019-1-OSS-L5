@@ -26,9 +26,11 @@ html, css, js를 통해 view를 만들고, 이 프로그램을 통해 기존의 
 * ~/go/src/github.com/asticode/go-astilectron-bundler/astilectron-bundler에서 `go build`
 
 **Environment variable**
-`export GOPATH=$HOME/go`
-`export GOBIN=$HOME/go/bin`
-`export PATH=$PATH:/usr/local/go/bin:$(go env GOBIN)`
+```sh
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin:$(go env GOBIN)
+```
 
 
 ### Make Color Picker through html, css, js
