@@ -1,34 +1,39 @@
-# 2019-1-OSS-L5
+# command-line fuzzy finder
 
-## Team Members
+## Introduce Our Team
 
-### 박경연(팀장)
-- Student Number: 2017312971
-- Email: [contestpark@naver.com](mailto:contestpark@naver.com)
-- Github ID: [contestpark](https://github.com/contestpark)
+### Team Member
+* 박경연(팀장) [`contestpark`](https://github.com/contestpark)
+* 김홍빈 [`HongBeenKim`](https://github.com/HongBeenKim)
+* 민세원 [`minSW`](https://github.com/minSW)
+* 이영우 [`duddn311`](https://github.com/duddn311)
 
-### 김홍빈(팀원)
-- Student Number: 2017311983
-- Email: [dtb05045@gmail.com](mailto:dtb05045@gmail.com)
-- Github ID: [HongBeenKim](https://github.com/HongBeenKim)
+자세한 내용은 [Wiki](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki)참고
 
-### 민세원(팀원)
-- Student Number: 2015310422
-- Email: [minsw08@gmail.com](mailto:minsw08@gmail.com)
-- Github ID: [minSW](https://github.com/minSW)
 
-### 이영우(팀원)
-- Student Number: 2013314600
-- Email: [duddn311@gmail.com](mailto:duddn311@gmail.com)
-- Github ID: [duddn311](https://github.com/duddn311)
+### Wiki
+* [Home](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki)
+* [History](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki/History)
+* [New Scheme](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki/New-Schemes)
+* [Role](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki/Role)
+
+
+
 
 <br/>
 
-## Project Explanation
+## Introduce Our Project
 
-### 1. 오픈소스 소개
+## Install
 
-<img src="https://raw.githubusercontent.com/junegunn/i/master/fzf.png" width="30%">
+## What we implemented
+
+### README contents
+- 
+- 
+- 
+
+<img src="https://raw.githubusercontent.com/junegunn/i/master/fzf.png" width="40%">
 
 ## fzf
 
