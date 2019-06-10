@@ -1021,19 +1021,7 @@ func parseOptions(opts *Options, allArgs []string) {
 				opts.Theme = tui.EmptyTheme()
 			} else if spec == "g" {
 				initWindow()
-				fzfPath := os.Getenv("FZF_PATH")
-				if len(fzfPath) > 0 {
-					fzfPath = fzfPath + "/"
-				}
-				configFile, err := os.Open(fzfPath + ".ColorConfig")
-				if err == nil {
-					data := make([]byte, 200)
-					configFile.Read(data)
-					words, _ := shellwords.Parse(string(data))
-					if len(words) > 1 {
-						parseOptions(opts, words[:len(words) - 1])
-					}
-				}  
+				ReadColorConfig(opts)  
 			} else {
 				opts.Theme = parseTheme(opts.Theme, spec)
 			}
@@ -1317,6 +1305,18 @@ func ParseOptions() *Options {
 	if len(words) > 0 {
 		parseOptions(opts, words)
 	}
+	
+	ReadColorConfig(opts)
+
+	// Options from command-line arguments
+	parseOptions(opts, os.Args[1:])
+
+	postProcessOptions(opts)
+	return opts
+}
+
+// ReadColorConfig reads saved color configs if available
+func ReadColorConfig(opts *Options) {
 	// Get environment variable: FZF_PATH (This should be registered manually by user)
 	fzfPath := os.Getenv("FZF_PATH")
 	if len(fzfPath) > 0 {
@@ -1331,10 +1331,4 @@ func ParseOptions() *Options {
 			parseOptions(opts, words[:len(words) - 1])
 		}
 	} 
-
-	// Options from command-line arguments
-	parseOptions(opts, os.Args[1:])
-
-	postProcessOptions(opts)
-	return opts
 }
