@@ -8,7 +8,6 @@ import (
 	"github.com/asticode/go-astilog"
 	"github.com/pkg/errors"
 	"os"
-	"strings"
 	"fmt"
 )
 
@@ -22,8 +21,7 @@ func handleMessages(_ *astilectron.Window, m bootstrap.MessageIn) (payload inter
 		}
 		var outputFile, _ = os.Create(".ColorConfig")
 		defer outputFile.Close()
-		s = strings.Replace(s, "--color=", ",", -1)
-		s = "--color=" + s[1:] + "\n"
+		s = s + "\n"
 		fmt.Fprint(outputFile, s)
 
 	default:

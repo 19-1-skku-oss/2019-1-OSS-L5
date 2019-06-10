@@ -1027,9 +1027,9 @@ func parseOptions(opts *Options, allArgs []string) {
 					configFile.Read(data)
 					words, _ := shellwords.Parse(string(data))
 					if len(words) > 1 {
-						parseOptions(opts, words[:1])
+						parseOptions(opts, words[:len(words) - 1])
 					}
-				} 
+				}  
 			} else {
 				opts.Theme = parseTheme(opts.Theme, spec)
 			}
@@ -1320,7 +1320,7 @@ func ParseOptions() *Options {
 		configFile.Read(data)
 		words, _ := shellwords.Parse(string(data))
 		if len(words) > 1 {
-			parseOptions(opts, words[:1])
+			parseOptions(opts, words[:len(words) - 1])
 		}
 	} 
 
