@@ -9,7 +9,7 @@ tags:
   - fzf
 ---
 
-## Implement Color Picker
+# Implement Color Picker
 
 ## Implementation
 
