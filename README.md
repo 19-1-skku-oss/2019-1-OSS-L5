@@ -57,8 +57,8 @@ fzf project는 다음과 같은 구성요소로 이루어져 있다:
 ### Install using git
 
 ```sh
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+$ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+$ ~/.fzf/install
 ```
 
 ### Usages
@@ -85,7 +85,7 @@ $ fzf
 이 오픈소스의 다양한 기능 중에는 터미널 배경의 색을 바꿀 수 있는 [Color Scheme](https://github.com/junegunn/fzf/wiki/Color-schemes)이라는 기능이 있는데, 다음과 같은 코드를 terminal에 입력하면,
 
 ```sh
-export FZF_DEFAULT_OPTS='
+$ export FZF_DEFAULT_OPTS='
   --color fg:28,bg:231,hl:21,fg+:0,bg+:153,hl+:21
   --color info:124,prompt:124,spinner:124,pointer:66,marker:66
 '
@@ -96,7 +96,7 @@ export FZF_DEFAULT_OPTS='
 
 우리 팀은 이 Color Scheme 부분에 추가적인 기능을 구현하기로 했는데,
 
-* 원래 프로젝트에 소개된 Color Scheme의 종류가 너무 적다
+* 원래 프로젝트에 소개된 Color Scheme의 종류가 너무 적음
 * 사용자가 직접 색깔을 customize할 경우 RGB값을 일일히 찾아 코드를 만들기 불편
 
 다음과 같은 문제점들을 해결하기 위해
@@ -134,6 +134,46 @@ Color Scheme을 수정하고, Color Picker를 만들기 위해 먼저 original r
 
 ### 3. Implement Color Picker
 
-**구현과정**
+* **Implementation**
 
-**사용방법**
+Color Picker를 구현하는데 [go-atilectron-bundler](https://github.com/asticode/go-astilectron-bundler)를 사용하였다.
+
+html,css,js를 통해 view를 만들고, 이 프로그램을 통해 기존의 fzf와 통신할 수 있게 만들어 주었다. ([issue #10](https://github.com/19-1-skku-oss/2019-1-OSS-L5/issues/10) 참고)
+
+먼저, Color Picker를 먼저 html,css,js를 통해 구현하였다.
+
+<img src="https://raw.githubusercontent.com/19-1-skku-oss/2019-1-OSS-L5/master/picture/colorpicker_html.png" width="70%">
+
+다음으로, go-astilectron-bundler를 사용해 Color Picker GUI를 구현한 결과이다
+
+`$ ./fzf --color g` 를 통해 사용할 수 있다.
+
+<img src="https://raw.githubusercontent.com/19-1-skku-oss/2019-1-OSS-L5/master/picture/colorpicker_gui.png" width="70%">
+
+* **Install and Usage**
+
+**Install**
+
+```sh
+$ git clone https://github.com/19-1-skku-oss/2019-1-OSS-L5.git
+$ cd fzf
+$ go build
+$ ./fzf --color g
+```
+
+**Usage**
+
+Color Picker 실행
+
+```sh
+$ ./fzf --color g
+```
+fzf실행
+
+```sh
+$ ./fzf
+```
+
+
+***
+_This document is edited by `박경연`_
