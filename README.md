@@ -164,6 +164,15 @@ html,css,js를 통해 view를 만들고, 이 프로그램을 통해 기존의 fz
 $ git clone https://github.com/19-1-skku-oss/2019-1-OSS-L5.git
 ```
 
+* Build(using astilectron)
+```sh
+$ cd fzf
+$ astilectron-bundler cc
+$ astilectron-bundler -v
+$ go build
+$ fzf --color g
+```
+
 * Modify Environment variable
 
 ```sh
@@ -179,7 +188,7 @@ $ export PATH=$FZF_PATH:$PATH
 $ fzf --color g
 ```
 
-* fzf실행
+* fzf 실행
 
 ```sh
 $ fzf
