@@ -7,7 +7,7 @@ $(function() {
 
 // Update the 'Generated Code'
 function updateCode() {
-  $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'" + getColorOptions() + "'");
+  $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'\n" + getColorOptions() + "'");
   $('.code').html($('.code').html().replace(/\n/g, '<br/>'));
 };
 
@@ -74,10 +74,10 @@ function applyToFzf() {
 
 // Make FZF_DEFAULT_OPTS string
 function getColorOptions() {
-  return "\n --color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
-  "\n --color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
-  "\n --color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
-  "\n --color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val()
+  return "--color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
+  "\n--color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
+  "\n--color=info:" + $('#info').val() + ",prompt:" + $('#promp').val() + ",pointer:" + $('#pointer').val() +
+  "\n--color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val()
 }
 
 // function to get a string containing 'fg' and 'bg' = -1
