@@ -158,11 +158,17 @@ html,css,js를 통해 view를 만들고, 이 프로그램을 통해 기존의 fz
 
 **Install**
 
+* Download
+
 ```sh
 $ git clone https://github.com/19-1-skku-oss/2019-1-OSS-L5.git
-$ cd fzf
-$ go build
-$ ./fzf --color g
+```
+
+* Modify Environment variable
+
+```sh
+$ export FZF_PATH="파일 다운받은 경로/fzf"
+$ export PATH=$FZF_PATH:$PATH
 ```
 
 **Usage**
@@ -170,13 +176,13 @@ $ ./fzf --color g
 * Color Picker 실행
 
 ```sh
-$ ./fzf --color g
+$ fzf --color g
 ```
 
 * fzf실행
 
 ```sh
-$ ./fzf
+$ fzf
 ```
 
 
