@@ -1022,6 +1022,9 @@ func parseOptions(opts *Options, allArgs []string) {
 			} else if spec == "g" {
 				initWindow()
 				fzfPath := os.Getenv("FZF_PATH")
+				if len(fzfPath) > 0 {
+					fzfPath = fzfPath + "/"
+				}
 				configFile, err := os.Open(fzfPath + ".ColorConfig")
 				if err == nil {
 					data := make([]byte, 200)
@@ -1316,6 +1319,9 @@ func ParseOptions() *Options {
 	}
 	// Get environment variable: FZF_PATH (This should be registered manually by user)
 	fzfPath := os.Getenv("FZF_PATH")
+	if len(fzfPath) > 0 {
+		fzfPath = fzfPath + "/"
+	}
 	configFile, err := os.Open(fzfPath + ".ColorConfig")
 	if err == nil {
 		data := make([]byte, 200)
