@@ -64,6 +64,7 @@ $ git clone https://github.com/19-1-skku-oss/2019-1-OSS-L5.git
 ```
 
 * Build(using astilectron)
+
 ```sh
 $ cd fzf
 $ astilectron-bundler cc
