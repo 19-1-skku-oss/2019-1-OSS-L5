@@ -18,7 +18,7 @@ function updateView() {
   $(".hl").css("color", $('#hl').val());
   $(".hlp").css("color", $('#hlp').val());
   $(".inf").css("color", $('#info').val());
-  $(".pro").css("color", $('#prompt').val());
+  $(".pro").css("color", $('#promp').val());
   $(".poi").css("color", $('#pointer').val());
   $(".mar").css("color", $('#marker').val());
   $(".spi").css("color", $('#spinner').val());
@@ -44,26 +44,21 @@ function setDefault(ele) {
 }
 
 function resetToDefault() {
-  $('#fg').val('#d0d0d0');
-  $('#bg').val('#121212');
-  $('#hl').val('#5f87af');
-  $('#fgp').val('#d0d0d0');
-  $('#bgp').val('#262626');
-  $('#hlp').val('#5fd7ff');
-  $('#info').val('#afaf87');
-  $('#prompt').val('#d7005f');
-  $('#pointer').val('#af5fff');
-  $('#marker').val('#87ff00');
-  $('#spinner').val('#af5fff');
-  $('#header').val('#87afaf');
+  $('#fg').val(fg.defaultValue);
+  $('#bg').val(bg.defaultValue);
+  $('#hl').val(hl.defaultValue);
+  $('#fgp').val(fgp.defaultValue);
+  $('#bgp').val(bgp.defaultValue);
+  $('#hlp').val(hlp.defaultValue);
+  $('#info').val(info.defaultValue);
+  $('#promp').val(promp.defaultValue);
+  $('#pointer').val(pointer.defaultValue);
+  $('#marker').val(marker.defaultValue);
+  $('#spinner').val(spinner.defaultValue);
+  $('#header').val(header.defaultValue);
 
   updateCode();
   updateView();
-
-  $("#reset-btn").popover('show');
-  setTimeout(function() {
-    $("#reset-btn").popover('destroy');
-  }, 1000);
 }
 
 function applyToFzf() {
