@@ -6,12 +6,7 @@ $(function() {
 });
 
 function updateCode() {
-  $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'" +
-    "\n --color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
-    "\n --color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
-    "\n --color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
-    "\n --color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val() +
-    "'");
+  $('.code').text("export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'" + getColorOptions() + "'");
   $('.code').html($('.code').html().replace(/\n/g, '<br/>'));
 };
 
@@ -63,12 +58,7 @@ function copyToClipboard() {
 
 function applyToFzf() {
   let message = {"name": "sendCode"};
-  message.payload =
-    "--color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
-    "\n" + "--color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
-    "\n--color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
-    "\n--color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val();
-  
+  message.payload = getColorOptions();
   astilectron.sendMessage(message, function(message) {
       // Check error
       if (message.name === "error") {
@@ -81,4 +71,12 @@ function applyToFzf() {
   setTimeout(function() {
     $("#apply-btn").popover('destroy');
   }, 1000);
+}
+
+
+function getColorOptions() {
+  return "\n --color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
+  "\n --color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
+  "\n --color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
+  "\n --color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val()
 }
