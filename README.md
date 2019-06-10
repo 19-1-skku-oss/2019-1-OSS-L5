@@ -2,7 +2,7 @@
 
 ## Introduce Our Team
 
-### Team Member([Wiki](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki))
+### Team Member
 * 박경연(팀장) [`contestpark`](https://github.com/contestpark)
 * 김홍빈 [`HongBeenKim`](https://github.com/HongBeenKim)
 * 민세원 [`minSW`](https://github.com/minSW)
@@ -17,8 +17,7 @@
 ### Web Site
 * [https://19-1-skku-oss.github.io/2019-1-OSS-L5/](https://19-1-skku-oss.github.io/2019-1-OSS-L5/)
 
-___
-
+</br>
 
 ## Introduce Our Project
 
@@ -97,19 +96,25 @@ export FZF_DEFAULT_OPTS='
 
 우리 팀은 이 Color Scheme 부분에 추가적인 기능을 구현하기로 했는데,
 
-1. 원래 프로젝트에 소개된 Color Scheme의 종류가 너무 적고  
-2. 사용자가 직접 색깔을 customize할 경우 RGB값을 일일히 찾아 코드를 만들기 불편하기 때문이다.
+* 원래 프로젝트에 소개된 Color Scheme의 종류가 너무 적다
+* 사용자가 직접 색깔을 customize할 경우 RGB값을 일일히 찾아 코드를 만들기 불편
 
+다음과 같은 문제점들을 해결하기 위해
 
+* 새로운 정적 Color Scheme 예시들을 추가 
+* 색깔을 선택하면 자동적으로 코드를 만들어주는 프로그램(Color Picker) 구현
 
+하기로 하였다.
 
+그래서 우리는 다음과 같은 순서로 프로젝트를 진행하였다.
 
 ### 1. Translation of Color Scheme Wiki
 
+Color Scheme을 수정하고, Color Picker를 만들기 위해 먼저 original repository의 Color Scheme에 대한 이해가 필요하였다. 그렇기 때문에 [Color Scheme Wiki](https://github.com/junegunn/fzf/wiki/Color-schemes)를 번역하여, [정적 페이지](https://19-1-skku-oss.github.io/2019-1-OSS-L5/project/2019/06/04/color-schemes.html)에 포스팅 했다.
+ 
 
-
-### 2. New static Color Scheme
-기존에 있는 Color Scheme에 정적 Scheme 몇가지를 더 추가하였다.([Wiki](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki/New-Schemes) 참고)
+### 2. New Static Color Scheme
+기존에 있는 Color Scheme에 정적 Scheme 몇가지를 더 추가하였다.
 
 이 Scheme들은 개발자들이 익숙한 다양한 Visual Studio Code의 테마를 기반으로 만들었다.
 
@@ -123,8 +128,12 @@ export FZF_DEFAULT_OPTS='
 
 <img src="https://raw.githubusercontent.com/19-1-skku-oss/2019-1-OSS-L5/master/picture/dark.png" width="70%">
 
-로 테마가 거의 비슷하게 만들어졌음을 알 수 있다. 
+로 테마가 거의 비슷하게 적용되었음을 알 수 있다. 
 
 더 다양한 테마는 Wiki의 [New Scheme](https://github.com/19-1-skku-oss/2019-1-OSS-L5/wiki/New-Schemes)참고.
 
-### 3. Implement Color Scheme GUI
+### 3. Implement Color Picker
+
+**구현과정**
+
+**사용방법**
