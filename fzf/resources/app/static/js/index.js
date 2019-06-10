@@ -13,7 +13,6 @@ function updateCode() {
     "\n --color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val() +
     "'");
   $('.code').html($('.code').html().replace(/\n/g, '<br/>'));
-
 };
 
 function updateView() {
@@ -63,7 +62,21 @@ function copyToClipboard() {
 }
 
 function applyToFzf() {
-  //TODO : implement apply
+  let message = {"name": "sendCode"};
+  message.payload =
+    "--color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
+    "\n" + "--color=fg+:" + $('#fgp').val() + ",bg+:" + $('#bgp').val() + ",hl+:" + $('#hlp').val() +
+    "\n--color=info:" + $('#info').val() + ",prompt:" + $('#prompt').val() + ",pointer:" + $('#pointer').val() +
+    "\n--color=marker:" + $('#marker').val() + ",spinner:" + $('#spinner').val() + ",header:" + $('#header').val();
+  
+  astilectron.sendMessage(message, function(message) {
+      // Check error
+      if (message.name === "error") {
+          asticode.notifier.error(message.payload);
+          return
+      }            
+  })
+  
   $("#apply-btn").popover('show');
   setTimeout(function() {
     $("#apply-btn").popover('destroy');

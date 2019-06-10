@@ -1021,6 +1021,15 @@ func parseOptions(opts *Options, allArgs []string) {
 				opts.Theme = tui.EmptyTheme()
 			} else if spec == "g" {
 				initWindow()
+				configFile, err := os.Open(".ColorConfig")
+				if err == nil {
+					data := make([]byte, 200)
+					configFile.Read(data)
+					words, _ := shellwords.Parse(string(data))
+					if len(words) > 1 {
+						parseOptions(opts, words[:1])
+					}
+				} 
 			} else {
 				opts.Theme = parseTheme(opts.Theme, spec)
 			}
@@ -1304,6 +1313,16 @@ func ParseOptions() *Options {
 	if len(words) > 0 {
 		parseOptions(opts, words)
 	}
+
+	configFile, err := os.Open(".ColorConfig")
+	if err == nil {
+		data := make([]byte, 200)
+		configFile.Read(data)
+		words, _ := shellwords.Parse(string(data))
+		if len(words) > 1 {
+			parseOptions(opts, words[:1])
+		}
+	} 
 
 	// Options from command-line arguments
 	parseOptions(opts, os.Args[1:])
