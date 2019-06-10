@@ -146,7 +146,7 @@ html, css, js를 통해 view를 만들고, 이 프로그램을 통해 기존의 
 
 다음으로, go-astilectron-bundler를 사용해 Color Picker GUI를 구현한 결과이다
 
-`$ ./fzf --color g` 를 통해 사용할 수 있다.
+환경변수를 등록한 경우 `$ fzf --color g` 를 통해 사용할 수 있다.
 
 <img src="https://raw.githubusercontent.com/19-1-skku-oss/2019-1-OSS-L5/master/picture/colorpicker_gui.png" width="70%">
 
