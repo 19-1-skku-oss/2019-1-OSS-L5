@@ -43,16 +43,26 @@ function setDefault(ele) {
   updateCode();
 }
 
-function copyToClipboard() {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($("#export-code").text()).select();
-  document.execCommand("copy");
-  $temp.remove();
+function resetToDefault() {
+  $('#fg').val('#d0d0d0');
+  $('#bg').val('#121212');
+  $('#hl').val('#5f87af');
+  $('#fgp').val('#d0d0d0');
+  $('#bgp').val('#262626');
+  $('#hlp').val('#5fd7ff');
+  $('#info').val('#afaf87');
+  $('#prompt').val('#d7005f');
+  $('#pointer').val('#af5fff');
+  $('#marker').val('#87ff00');
+  $('#spinner').val('#af5fff');
+  $('#header').val('#87afaf');
 
-  $("#copy-btn").popover('show');
+  updateCode();
+  updateView();
+
+  $("#reset-btn").popover('show');
   setTimeout(function() {
-    $("#copy-btn").popover('destroy');
+    $("#reset-btn").popover('destroy');
   }, 1000);
 }
 
@@ -72,7 +82,6 @@ function applyToFzf() {
     $("#apply-btn").popover('destroy');
   }, 1000);
 }
-
 
 function getColorOptions() {
   return "\n --color=fg:" + getColorText($('#fg')) + ",bg:" + getColorText($('#bg')) + ",hl:" + $('#hl').val() +
