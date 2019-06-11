@@ -194,7 +194,7 @@ $ fzf --color g
 $ fzf
 ```
 
-### 3. Pull Request
+### 4. Pull Request
 
 현재 원본 repository에 pull request를 보내 놓은 상태다.
 
