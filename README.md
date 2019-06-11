@@ -194,6 +194,18 @@ $ fzf --color g
 $ fzf
 ```
 
+### 3. Pull Request
+
+현재 원본 repository에 pull request를 보내 놓은 상태다.
+
+**Pull Request**
+
+[GUI color picker for fzf #1601](https://github.com/junegunn/fzf/pull/1601)
+
+**Issue**
+
+[### Color Picker to make custom Color Scheme for fzf #1602](https://github.com/junegunn/fzf/issues/1602)
+
 
 ***
 _This document is edited by `박경연`_
