@@ -173,7 +173,7 @@ $ go build
 $ fzf --color g
 ```
 
-* Modify Environment variable
+* Modify environment variable
 
 ```sh
 $ export FZF_PATH="파일 다운받은 경로/fzf"
@@ -204,7 +204,7 @@ $ fzf
 
 **Issue**
 
-[### Color Picker to make custom Color Scheme for fzf #1602](https://github.com/junegunn/fzf/issues/1602)
+[Color Picker to make custom Color Scheme for fzf #1602](https://github.com/junegunn/fzf/issues/1602)
 
 
 ***
